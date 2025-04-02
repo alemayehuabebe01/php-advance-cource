@@ -18,7 +18,26 @@ if(isset($_COOKIE['test'])){
 }
 
 // session start
-session_start();
+session_start(); 
 
+//create 
+
+$_SESSION['test'] = 'This is session variable';
+
+
+// array_filter functions 
+
+$array= [
+   'a'=> 1,
+   'b'=>2,
+   'c'=> 3,
+   'd'=>4,
+];
+
+$filteredArray = array_filter($array, function($level){
+   return $level == 2;
+}, mode: 0);
+
+print_r($filteredArray);
 
 
