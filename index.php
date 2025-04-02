@@ -1,15 +1,24 @@
 <?php 
 
-use Bible\Book;
 
 require_once 'ClassA.php';
 require_once 'ClassB.php';
 
-$book = new Movies\Book();
-$book->read();
+// $book = new Movies\Book();
+// $book->read();
 
-$bibleBook = new Bible\Book();
-$bibleBook->read();
+// $bibleBook = new Bible\Book();
+// $bibleBook->read();
+
+class Human {
+   private $name = 'Alexsa';
+   public static function sayHello(){
+      echo 'Hello from human class';
+   }
+}
+
+
+Human::sayHello();
 /*
    cookies in browther
 */
