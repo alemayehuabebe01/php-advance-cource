@@ -1,9 +1,15 @@
 <?php 
 
+use Bible\Book;
+
 require_once 'ClassA.php';
 require_once 'ClassB.php';
 
+$book = new Movies\Book();
+$book->read();
 
+$bibleBook = new Bible\Book();
+$bibleBook->read();
 /*
    cookies in browther
 */

@@ -2,6 +2,6 @@
 namespace Bible;
 class Book{
     public function read(){
-      echo 'reading book';
+      echo 'reading book Bible Name space';
     }
 }
