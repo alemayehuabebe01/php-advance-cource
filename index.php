@@ -1,5 +1,9 @@
 <?php 
 
+require_once 'ClassA.php';
+require_once 'ClassB.php';
+
+
 /*
    cookies in browther
 */
@@ -56,25 +60,28 @@
 
 // class practice
 
-class Car{
-   public function driving(){
-      echo "I can drive ";
-   }
-}
+// class Car{
+//    public function driving(){
+//       echo "I can drive ";
+//    }
+// }
 
-class ElectricCar extends Car{
-   public function ecpd(){
-      echo "I am Eletric  car power contronler";
-   }
-}
+// class ElectricCar extends Car{
+//    public function ecpd(){
+//       echo "I am Eletric  car power contronler";
+//    }
+// }
 
-class Tesla extends ElectricCar{
-   public function autoDrive(){
-      echo " I am tesla auto drive system";
-   }
-}
+// class Tesla extends ElectricCar{
+//    public function autoDrive(){
+//       echo " I am tesla auto drive system";
+//    }
+// }
 
-$tesla = new Tesla();
-$tesla->driving();
-$tesla->ecpd();
-$tesla->autoDrive();
+// $tesla = new Tesla();
+// $tesla->driving();
+// $tesla->ecpd();
+// $tesla->autoDrive();
+
+// Namespace 
+
