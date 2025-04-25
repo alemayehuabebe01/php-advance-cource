@@ -124,16 +124,16 @@ require_once 'ClassB.php';
 // Namespace 
 
 interface Human{
-   public function sayName();
+   public function sayName(string $name);
    public function getAge(int $yearBorn);
 
 }
 
 
 class Person implements Human{
-    public function sayName(){
-       echo "My name is Alemayehu Abebe";
-    }
+   public function sayName(string $name){
+      echo "My name is " . $name;
+   }
 
     public function getAge(int $yearBorn){
        echo "i am ". (date(format:'Y')-$yearBorn) . " Years Old";
