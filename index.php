@@ -10,15 +10,38 @@ require_once 'ClassB.php';
 // $bibleBook = new Bible\Book();
 // $bibleBook->read();
 
-class Human {
-   private $name = 'Alexsa';
-   public static function sayHello(){
-      echo 'Hello from human class';
-   }
-}
+// class Human { 
+//    private $name;
+//    private $age;
 
+//    public function setName($name){
+//       $this->name = ucfirst($name);
+//       return $this;
+//    }
 
-Human::sayHello();
+//    public function setAg($age){
+//       $this->age = $age;
+//       return $this;
+//    }
+
+//    public function introduc()
+//    {
+//       return "My name is {$this->name} and I am {$this->age} years old.";
+//    }
+// }
+
+// $alex = new Human();
+// // $alex->setName(name:'Alemayehu Abebe');
+// // $alex->setAg(age: 25);
+
+// $alex->setName(name:'Alex')->setAg(age:23)->introduc();
+
+// display the name and age of the human object
+
+//echo $alex->introduc();
+
+ 
+
 /*
    cookies in browther
 */
@@ -99,4 +122,25 @@ Human::sayHello();
 // $tesla->autoDrive();
 
 // Namespace 
+
+interface Human{
+   public function sayName();
+   public function getAge(int $yearBorn);
+
+}
+
+
+class Person implements Human{
+    public function sayName(){
+       echo "My name is Alemayehu Abebe";
+    }
+
+    public function getAge(int $yearBorn){
+       echo "i am ". (date(format:'Y')-$yearBorn) . " Years Old";
+    }
+}
+
+$person = new Person();
+$person->sayName("Alemayehu Abebe");
+$person->getAge(1992);
 
