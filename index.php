@@ -123,24 +123,81 @@ require_once 'ClassB.php';
 
 // Namespace 
 
-interface Human{
-   public function sayName(string $name);
-   public function getAge(int $yearBorn);
+// interface Human{
+//    public function sayName(string $name);
+//    public function getAge(int $yearBorn);
 
-}
+// }
 
 
-class Person implements Human{
-   public function sayName(string $name){
-      echo "My name is " . $name;
-   }
+// class Person implements Human{
+//    public function sayName(string $name){
+//       echo "My name is " . $name;
+//    }
 
-    public function getAge(int $yearBorn){
-       echo "i am ". (date(format:'Y')-$yearBorn) . " Years Old";
-    }
-}
+//     public function getAge(int $yearBorn){
+//        echo "i am ". (date(format:'Y')-$yearBorn) . " Years Old";
+//     }
+// }
 
-$person = new Person();
-$person->sayName("Alemayehu Abebe");
-$person->getAge(1992);
+// $person = new Person();
+// $person->sayName("Alemayehu Abebe");
+// $person->getAge(1992);
+
+//Constant
+
+// class Person{
+//    const Name = "Alemayehu Abebe";
+//    const Age = 25;
+// }
+
+// echo Person::Name . "\n";
+
+// Abstract class
+
+// defining abstract class
+
+// abstract class Person{
+//    private $name;
+
+//    public function sayHello(){
+//       echo "Hello, I am";
+//    }
+
+//    abstract protected function nationalty();
+// }
+
+// class Alexs extends Person{
+//    public function nationalty(){
+//       echo " i am Ethioipian";
+//    }
+// }
+
+
+// Trait 
+
+//define 
+
+ 
+
+// class Person{
+//     public function __construct(public string $name = 'Alexs', public int $age = 25){
+//        if($name == 'alexs'){
+//           echo "Hello Agin";
+//        }
+//     }
+
+//     public function introduce(){
+//        return "My name is {$this->name} and I am {$this->age} years old";
+//     }
+// }
+
+// $person = new Person(name: 'Alemayehu Abebe', age: 25);
+// echo $person->introduce();
+
+#############
+
+//regular expression
+
+
 
