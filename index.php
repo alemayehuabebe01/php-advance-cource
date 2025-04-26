@@ -1,9 +1,6 @@
 <?php 
 
-
-require_once 'ClassA.php';
-require_once 'ClassB.php';
-
+ 
 // $book = new Movies\Book();
 // $book->read();
 
@@ -198,6 +195,11 @@ require_once 'ClassB.php';
 #############
 
 //regular expression
+
+//echo $_SERVER['REQUEST_URI'];
+require_once 'Router.php';
+Router::handle( method: 'GET', path: '/contact',filename:'./contact.php');
+
 
 
 
