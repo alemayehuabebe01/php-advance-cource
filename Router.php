@@ -9,14 +9,15 @@ class Router
          $currentUri = $_SERVER['REQUEST_URI'];
 
          if($currentMethod != $method){
-            return http_response_code(405);
+            return false;
          } 
 
          $root = '/php';
-         $pattern = '#^'.$path.'$#siD';
+         $pattern = '#^'.$root.$path.'$#siD';
 
          if(preg_match($pattern, $currentUri)){
             require_once $filename;
+            exit();
          }
 
 

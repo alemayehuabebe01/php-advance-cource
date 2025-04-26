@@ -198,8 +198,10 @@
 
 //echo $_SERVER['REQUEST_URI'];
 require_once 'Router.php';
+
 Router::handle( method: 'GET', path: '/contact',filename:'./contact.php');
+Router::handle( method: 'GET', path: '/pricing',filename:'./pricing.php');
 
-
+echo "index page file";
 
 
