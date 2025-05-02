@@ -206,7 +206,7 @@
 
 // connect to database
 
-$pdo = new PDO(dsn:'mysql:host=localhost;dbname=phpcase',username:"root",password:'');
+//$pdo = new PDO(dsn:'mysql:host=localhost;dbname=phpcase',username:"root",password:'');
 //Insert data into database
 
 // $count = $pdo->exec(statement:'INSERT INTO info (name) VALUES ("Tomas")');
@@ -259,39 +259,46 @@ $pdo = new PDO(dsn:'mysql:host=localhost;dbname=phpcase',username:"root",passwor
 // echo $responce;
 
 
-$curl = curl_init();
-$requestType = 'GET';
-$url = 'https://www.imdb.com/chart/boxoffice/';
-curl_setopt_array($curl,[
-      CURLOPT_URL => $url,
-      CURLOPT_CUSTOMREQUEST => $requestType,
-      CURLOPT_TIMEOUT => 30,
-      CURLOPT_RETURNTRANSFER => true,
-]);
+// $curl = curl_init();
+// $requestType = 'GET';
+// $url = 'https://www.imdb.com/chart/boxoffice/';
+// curl_setopt_array($curl,[
+//       CURLOPT_URL => $url,
+//       CURLOPT_CUSTOMREQUEST => $requestType,
+//       CURLOPT_TIMEOUT => 30,
+//       CURLOPT_RETURNTRANSFER => true,
+// ]);
 
-$response = curl_exec($curl);
-curl_close($curl);
-libxml_use_internal_errors(true);
-$dom = new DOMDocument();
-$dom->loadHTML($response);
-$xpath = new DOMXPath($dom);
+// $response = curl_exec($curl);
+// curl_close($curl);
+// libxml_use_internal_errors(true);
+// $dom = new DOMDocument();
+// $dom->loadHTML($response);
+// $xpath = new DOMXPath($dom);
 
-$weekendTitleNode = $xpath->query('//*[@id="boxoffice"]/h4');
+// $weekendTitleNode = $xpath->query('//*[@id="boxoffice"]/h4');
 
-// Check if any nodes were found
-if ($weekendTitleNode->length > 0) {
-    $firstItem = $weekendTitleNode->item(0);
-    echo htmlspecialchars($firstItem->nodeValue);
-} else {
-    echo "No box office title found. The page structure may have changed.";
+// // Check if any nodes were found
+// if ($weekendTitleNode->length > 0) {
+//     $firstItem = $weekendTitleNode->item(0);
+//     echo htmlspecialchars($firstItem->nodeValue);
+// } else {
+//     echo "No box office title found. The page structure may have changed.";
     
-    // Debugging: Output the HTML to see current structure
-    // file_put_contents('debug.html', $response);
-}
+//     // Debugging: Output the HTML to see current structure
+//     // file_put_contents('debug.html', $response);
+// }
 
-$firtItem = $weekendTitleNode->item(0);
+// $firtItem = $weekendTitleNode->item(0);
 
-echo $firtItem->nodeValue;
+// echo $firtItem->nodeValue;
 
 
+// Execute Python script and capture output
+$command = 'python hello.py 2>&1';  // 2>&1 redirects stderr to stdout
+exec($command, $output, $resultCode);
 
+// Display results
+echo "Output:\n";
+print_r($output);  // Better for arrays than var_dump
+echo "\nReturn code: " . $resultCode . "\n";
